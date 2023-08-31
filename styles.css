@@ -1,0 +1,5 @@
+.card-img-container {
+    padding-top: 75%; /* 75% maintains a 4:3 aspect ratio */
+    background-size: cover;
+    background-position: center;
+}
