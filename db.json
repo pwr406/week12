@@ -1,11 +1,20 @@
 {
-    "movies": [
-      {
-        "movieName": "",
-        "Director": "",
-        "Poster": "",
-        "Rating": "",
-        "id": 1
-      }
-    ]
-  }
+  "movies": [
+    {
+      "name": "Black Hawk Down",
+      "director": "Ridley Scott",
+      "poster": "images/BHD.jpg",
+      "overview": "When U.S. Rangers and an elite Delta Force team attempt to kidnap two underlings of a Somali warlord, their Black Hawk helicopters are shot down, and the Americans suffer heavy casualties, facing intense fighting from the militia on the ground.",
+      "rating": 5,
+      "id": 1
+    },
+    {
+      "name": "Spider-Man: Across the Spider-Verse (2023)",
+      "director": "Justin K. Thompson",
+      "overview": "After reuniting with Gwen Stacy, Brooklyn’s full-time, friendly neighborhood Spider-Man is catapulted across the Multiverse, where he encounters the Spider Society, a team of Spider-People charged with protecting the Multiverse’s very existence. But when the heroes clash on how to handle a new threat, Miles finds himself pitted against the other Spiders and must set out on his own to save those he loves most.",
+      "poster": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/8Vt6mWEReuy4Of61Lnj5Xj704m8.jpg",
+      "rating": "4",
+      "id": 3
+    }
+  ]
+}
