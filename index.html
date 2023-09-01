@@ -38,11 +38,11 @@
                     <div class="col-8 d-flex align-items-end mb-3">
                     <select class="form-select me-3" aria-label="rating" id="rating">
                         <option selected>Select your rating for the movie</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
+                        <option value="1">⭐</option>
+                        <option value="2">⭐⭐</option>
+                        <option value="3">⭐⭐⭐</option>
+                        <option value="4">⭐⭐⭐⭐</option>
+                        <option value="5">⭐⭐⭐⭐⭐</option>
                       </select>
                       <button type="submit" class="btn btn-outline-primary" id="submit">Submit</button>
                     </div>
@@ -81,38 +81,8 @@
           <h1 class="modal-title fs-5" id="exampleModalLabel">Update Your Movie</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        <div class="modal-body">
-            <form>
-                <div class="col mb-3">
-                  <label for="movieName" class="form-label">Movie Name</label>
-                  <input type="text" class="form-control" id="modalMovieName" aria-describedby="movieHelp">
-                  <div id="movieHelp" class="form-text">Let's find your movie</div>
-                </div>
-                <div class="col mb-3">
-                  <label for="director" class="form-label">Director</label>
-                  <input type="text" class="form-control" id="modalDirector">
-                </div>
-                <div class="col mb-3">
-                    <label for="overview" class="form-label">Brief Overview:</label>
-                    <textarea class="form-control" id="modalOverview" style="height: 100px"></textarea>
-                  </div>
-                  <div class="col mb-3">
-                    <label for="poster" class="form-label">URL of poster</label>
-                    <input type="text" class="form-control" id="modalPoster" aria-describeby="posterHelp">
-                    <div id="posterHelp" class="form-text">Please use <a href="https://www.themoviedb.org/"> themoviedb.org</a> to find the link for your movie poster</div>
-                  </div>  
-                <div class="col-10 d-flex align-items-end mb-3">
-                <select class="form-select me-3" aria-label="rating" id="modalRating">
-                    <option selected>Select your rating for the movie</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                  </select>
-                  <button type="submit" class="btn btn-outline-primary" id="modalSubmit">Submit</button>
-                </div>
-            </form>
+        <div class="modal-body" id="modalBody">
+            
         </div>
        
       </div>

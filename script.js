@@ -70,6 +70,51 @@ function deleteMovie(id) {
 function launchModal(id) {
     const indexToUpdate = movieLib.findIndex(movie => movie.id === id)
     const myModal = new bootstrap.Modal(document.getElementById('updateModal'))
+    const modalBody = $('#modalBody')
+    const form =$(
+       `<form>
+        <div class="col mb-3">
+          <label for="movieName" class="form-label">Movie Name</label>
+          <input type="text" class="form-control" id="modalMovieName" aria-describedby="movieHelp">
+          <div id="movieHelp" class="form-text">Let's find your movie</div>
+        </div>
+        <div class="col mb-3">
+          <label for="director" class="form-label">Director</label>
+          <input type="text" class="form-control" id="modalDirector">
+        </div>
+        <div class="col mb-3">
+            <label for="overview" class="form-label">Brief Overview:</label>
+            <textarea class="form-control" id="modalOverview" style="height: 100px"></textarea>
+          </div>
+          <div class="col mb-3">
+            <label for="poster" class="form-label">URL of poster</label>
+            <input type="text" class="form-control" id="modalPoster" aria-describeby="posterHelp">
+            <div id="posterHelp" class="form-text">Please use <a href="https://www.themoviedb.org/"> themoviedb.org</a> to find the link for your movie poster</div>
+          </div>  
+        <div class="col-10 d-flex align-items-end mb-3">
+        <select class="form-select me-3" aria-label="rating" id="modalRating">
+            <option selected>Select your rating for the movie</option>
+            <option value="1">⭐</option>
+            <option value="2">⭐⭐</option>
+            <option value="3">⭐⭐⭐</option>
+            <option value="4">⭐⭐⭐⭐</option>
+            <option value="5">⭐⭐⭐⭐⭐</option>
+          </select>
+          <button type="submit" class="btn btn-outline-primary" id="modalSubmit">Submit</button>
+        </div>
+    </form>        
+    `)
+
+    const selectedMovie = movieLib[indexToUpdate];
+    form.find('#modalMovieName').val(selectedMovie.name);
+    form.find('#modalDirector').val(selectedMovie.director);
+    form.find('#modalOverview').val(selectedMovie.overview);
+    form.find('#modalPoster').val(selectedMovie.poster);
+    form.find('#modalRating').val(selectedMovie.rating);
+
+    modalBody.empty().append(form);
+  
+
     myModal.show()
     $('#modalSubmit').on("click", (event) => { 
     event.preventDefault()
