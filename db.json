@@ -13,8 +13,24 @@
       "director": "Justin K. Thompson",
       "overview": "Tons of fun information ",
       "poster": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/8Vt6mWEReuy4Of61Lnj5Xj704m8.jpg",
-      "rating": "3",
+      "rating": "4",
       "id": 3
+    },
+    {
+      "name": "Pulp Fiction",
+      "director": "Quentin Tarintino ",
+      "overview": "A burger-loving hit man, his philosophical partner, a drug-addled gangster's moll and a washed-up boxer converge in this sprawling, comedic crime caper. Their adventures unfurl in three stories that ingeniously trip back and forth in time.",
+      "poster": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/d5iIlFn5s0ImszYzBPb8JPIfbXD.jpg",
+      "rating": "4",
+      "id": 4
+    },
+    {
+      "name": "test",
+      "director": "Justin K. Thompson",
+      "overview": "TETWET ",
+      "poster": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/8Vt6mWEReuy4Of61Lnj5Xj704m8.jpg",
+      "rating": "3",
+      "id": 5
     }
   ]
 }

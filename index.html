@@ -3,71 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Moive Library</title>
+    <title>My Movie Library</title>
     <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="styles.css" rel="stylesheet">
 </head>
 <body>
+    <!-- nav bar to display page title in a neat way - may add pages down the road -->
     <nav class="navbar bg-body-tertiary">
         <div class="container-fluid  d-flex justify-content-center">
           <h1 class="mb-2 display-1">My Movie Library</h1>
         </div>
       </nav>
+      <!-- Form to create new movie -->
     <div class="container">
         <div class="row justify-content-center mt-3">
-            <div class="col-6">
-                <form>
-                    <div class="col mb-3">
+            <div class="col-10">
+                <form class="row g-2">
+                    <div class="col-6">
                       <label for="movieName" class="form-label">Movie Name</label>
                       <input type="text" class="form-control" id="movieName" aria-describedby="movieHelp">
-                      <div id="movieHelp" class="form-text">Let's find your movie</div>
                     </div>
-                    <div class="col mb-3">
+                    <div class="col-6">                        
                       <label for="director" class="form-label">Director</label>
                       <input type="text" class="form-control" id="director">
-                    </div>
-                    <div class="col mb-3">
+                    </div>                  
+ 
+                    <div class="col-12">
                         <label for="overview" class="form-label">Brief Overview:</label>
                         <textarea class="form-control" id="overview" style="height: 100px"></textarea>
-                      </div>
-                      <div class="col mb-3">
+                    </div>
+                    <div class="col-6">
                         <label for="poster" class="form-label">URL of poster</label>
                         <input type="text" class="form-control" id="poster" aria-describeby="posterHelp">
                         <div id="posterHelp" class="form-text">Please use <a href="https://www.themoviedb.org/"> themoviedb.org</a> to find the link for your movie poster</div>
-                      </div>  
-                    <div class="col-8 d-flex align-items-end mb-3">
-                    <select class="form-select me-3" aria-label="rating" id="rating">
+                    </div>  
+                    
+                    <div class="col-4">
+                        <label for="rating" class="form-label">Rate your movie</label>
+                        <select class="form-select me-3" aria-label="rating" id="rating">
                         <option selected>Select your rating for the movie</option>
-                        <option value="1">⭐</option>
+                        <option value="1">⭐</option>  <!--May be able to change values to stars to remove if/else if statement in JS to convert value to star-->
                         <option value="2">⭐⭐</option>
                         <option value="3">⭐⭐⭐</option>
                         <option value="4">⭐⭐⭐⭐</option>
                         <option value="5">⭐⭐⭐⭐⭐</option>
                       </select>
-                      <button type="submit" class="btn btn-outline-primary" id="submit">Submit</button>
+                    </div>
+                    <div class="col-2 d-flex align-items-start pt-4 mt-3"> <!--this was a real pain to get the submit button to line up correctly-->
+                        <button type="submit" class="btn btn-outline-primary" id="submit">Submit</button>
                     </div>
                 </form>
             </div>
         </div>
     </div>
-
+<!-- container and row for where movies will be !!NEED TO LOOK AT GRID MORE IN BOOTSTRAP - LOOKS STRANGE WHEN MOVIES GO TO NEXT "ROW" -->
     <div class="container-fluid bg-secondary-subtle mt-5">
-        <div class="row align-items-start" id ="movieRow">
-            <div class="col">
-                <div class="card m-2" style="width: 18rem;">
-                    <!-- <div class="card-img-container" style="background-image: url('images/Sample.jpg');"></div> -->
-                    <img src="images/Sample.jpg" class="card-img-top" alt="Movie Image">
-                    <div class="card-body">
-                      <h5 class="card-title" id="movieTitle">Card title</h5>
-                      <p class="card-text" id="description">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
-                    <ul class="list-group list-group-flush">
-                      <li class="list-group-item" id="movieDirector">An item</li>
-                      <li class="list-group-item" id="movieRating">A second item</li>
-                    </ul>
-                    <button class="btn btn-outline-danger" id="deleteButton">Delete</button> 
-                  </div>
-            </div>
+        <div class="row d-inline-flex justify-content-start" id ="movieRow">
+           
             
         </div>
     </div>
